@@ -7,6 +7,7 @@ class Fixnum
     # quarters
     if remainder >=25
       quarters_check = amount./(25)
+      remainder = amount.%(25)
       quarters_result = quarters_check.to_s().concat(" quarters")
       coins.push(quarters_result)
     end
@@ -14,6 +15,7 @@ class Fixnum
     # dimes
     if remainder <25 && remainder >=10
       dimes_check = remainder./(10)
+      remainder = amount.%(10)
       dimes_result = dimes_check.to_s().concat(" dimes")
       coins.push(dimes_result)
     end
@@ -21,6 +23,7 @@ class Fixnum
     # nickels
     if remainder <10 && remainder >=5
       nickels_check = remainder./(5)
+      remainder = amount.%(5)
       nickels_result = nickels_check.to_s().concat(" nickels")
       coins.push(nickels_result)
     end
