@@ -13,4 +13,9 @@ require('coin_combination')
     it("takes a nickel and displays how many nickels are needed as part of the change") do
         expect((5).coin_combination()).to(eq("1 nickels"))
     end
+
+    it("takes a penny and displays how many pennies are needed as part of the change") do
+        expect((1).coin_combination()).to(eq("1 pennies"))
+    end
+
   end
