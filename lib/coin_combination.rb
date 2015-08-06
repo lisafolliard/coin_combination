@@ -12,10 +12,17 @@ class Fixnum
     end
 
     # dimes
-    if remainder <=10 && remainder >=5
+    if remainder <=10 && remainder >5
       dimes_check = remainder./(10)
       dimes_result = dimes_check.to_s().concat(" dimes")
       coins.push(dimes_result)
+    end
+
+    # nickels
+    if remainder <=5 && remainder >1
+      nickels_check = remainder./(5)
+      nickels_result = nickels_check.to_s().concat(" nickels")
+      coins.push(nickels_result)
     end
     coins.join(", ")
   end
